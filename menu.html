@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic settings and Title of the page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | South's Bake Haven</title>
+    
+    <!-- Link to stylish fonts from Google -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Outfit:wght@300;500;800&display=swap"
+        rel="stylesheet">
+    
+    <!-- Link to your CSS design files -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animatedNavBAR.css">
+</head>
+
+<body>
+
+    <!-- Header: The top navigation bar -->
+    <header class="navbar">
+    <div class="nav-container">
+        <!-- Logo box with image and shop name -->
+        <div class="logo-box">
+            <img src="pictures/logo/South Logo.jpg" alt="South's Bake Haven" class="logo">
+            <div class="logo-text-group">
+                <span class="logo-main">SOUTH'S</span>
+                <span class="logo-sub">BAKE HAVEN</span>
+            </div>
+        </div>
+
+        <!-- Navigation Links to other pages -->
+        <nav class="nav-links" id="nav-menu">
+            <a href="index.html">HOME</a>
+            <a href="aboutCake.html">OUR STORY</a>
+            <a href="menu.html" class="active">MENU</a> <!-- Highlighted as active page -->
+            <a href="gallery.html">GALLERY</a>
+            <a href="menu.html#contact-section">CONTACT</a>
+        </nav>
+
+        <!-- Toggle button for mobile view -->
+        <div class="nav-right">
+            <button class="mobile-toggle" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    <!-- Main Content: The Menu List -->
+    <main class="menu-page">
+        <!-- Menu Header section with title and description -->
+        <div class="menu-header">
+            <h1 class="page-title">South's <span class="text-caramelbrown"> Bake</span> Menu</h1>
+            <p class="page-desc">Premium handcrafted treats from Tayabas City.</p>
+        </div>
+
+        <!-- Category: Wedding Cakes -->
+        <h2 class="section-divider">WEDDING CAKES</h2>
+        <div class="menu-grid">
+            <div class="menu-item wedding-item">
+                <div class="item-img">
+                    <span class="badge">Premium</span>
+                    <img src="pictures/menuImages/WedCAKES.jpg" alt="Wedding Cakes">
+                </div>
+                <div class="item-details">
+                    <h3>Premium Wedding Cakes</h3>
+                    <p>Classic or Full Fondant. 1 to 5 Tiers available.</p>
+                    <div class="item-footer">
+                        <span class="price">Starts at ₱1,500</span>
+                        <!-- Button that opens the Wedding-specific popup (Modal) -->
+                        <button class="btn-add"
+                            onclick="openWeddingModal('Wedding Cakes', 'pictures/menuImages/c517b421-ce12-444f-a0a3-b659e6778b23.jpg')">ORDER NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category: Customized Moist Cakes -->
+        <h2 class="section-divider">CUSTOMIZED MOIST CAKES</h2>
+        <div class="menu-grid">
+            <!-- Item: Choco/Ube/Mocha -->
+            <div class="menu-item">
+                <div class="item-img"><img src="pictures/menuImages/moistCAKESCHOCO.png" alt="Chocolate Moist"></div>
+                <div class="item-details">
+                    <h3>Chocolate / Ube / Mocha</h3>
+                    <div class="item-footer">
+                        <span class="price">Starts at ₱450</span>
+                        <!-- Button that opens the Moist Cake popup -->
+                        <button class="btn-add"
+                            onclick="openMoistModal('Chocolate/Ube/Mocha Moist Cake', 450, 'pictures/menuImages/moistCAKESCHOCO.png')">ORDER NOW</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Item: Red Velvet/Matcha -->
+            <div class="menu-item">
+                <div class="item-img"><img src="pictures/menuImages/moistCakesMATCHA.png" alt="Red Velvet Moist"></div>
+                <div class="item-details">
+                    <h3>Red Velvet / Matcha</h3>
+                    <div class="item-footer">
+                        <span class="price">Starts at ₱480</span>
+                        <button class="btn-add"
+                            onclick="openMoistModal('Red Velvet/Matcha Moist Cake', 480, 'pictures/menuImages/moistCakesMATCHA.png')">ORDER NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category: Pastries & Small Treats -->
+        <h2 class="section-divider">PASTRIES & TREATS</h2>
+        <div class="menu-grid">
+            <!-- Item: Cheese Bars -->
+            <div class="menu-item">
+                <div class="item-img"><img src="pictures/menuImages/cheeseBars.png" alt="Cheese Bars"></div>
+                <div class="item-details">
+                    <h3>Cheese Bars</h3>
+                    <div class="item-footer">
+                        <span class="price">₱170</span>
+                        <!-- Button that opens the Pastry popup with 2 price options (Solo/Box) -->
+                        <button class="btn-add"
+                            onclick="openPastryModal('Cheese Bars', 170, 330, 'pictures/menuImages/cheeseBars.png')">ORDER NOW</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Item: Fudgy Brownies -->
+            <div class="menu-item">
+                <div class="item-img"><img src="pictures/menuImages/fudgyBrownies.png" alt="Fudgy Brownies"></div>
+                <div class="item-details">
+                    <h3>Fudgy Brownies</h3>
+                    <div class="item-footer">
+                        <span class="price">₱170</span>
+                        <button class="btn-add"
+                            onclick="openPastryModal('Fudgy Brownies', 170, 330, 'pictures/menuImages/fudgyBrownies.png')">ORDER NOW</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Item: Cinnamon Rolls -->
+            <div class="menu-item">
+                <div class="item-img"><img src="pictures/menuImages/cinnamonRolls.png" alt="Cinnamon Rolls"></div>
+                <div class="item-details">
+                    <h3>Cinnamon Rolls</h3>
+                    <div class="item-footer">
+                        <span class="price">₱150</span>
+                        <button class="btn-add"
+                            onclick="openPastryModal('Cinnamon Rolls', 150, 290, 'pictures/menuImages/cinnamonRolls.png')">ORDER NOW</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Item: Premium Donuts -->
+            <div class="menu-item">
+                <div class="item-img"><img src="pictures/menuImages/premiumDonuts.png" alt="Premium Donuts"></div>
+                <div class="item-details">
+                    <h3>Premium Donuts</h3>
+                    <div class="item-footer">
+                        <span class="price">₱160</span>
+                        <button class="btn-add"
+                            onclick="openPastryModal('Premium Donuts', 160, 310, 'pictures/menuimages/premiumDonuts.png')">ORDER NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Order Modal: The popup window that appears when you click 'ORDER NOW' -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalName">Product Name</h2>
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <img id="modalImg" src="" alt="Product Image" class="modal-main-img"
+                    style="width:100%; border-radius:15px; margin-bottom:15px;">
+                <!-- This div will be filled with options (size, quantity, etc.) by JavaScript -->
+                <div id="modalDynamicBody"></div>
+            </div>
+            <div class="modal-footer">
+                <div class="total-section">
+                    <span>Total Price:</span>
+                    <h3 id="displayPrice">₱0.00</h3>
+                </div>
+                <button class="btn-confirm-order" onclick="confirmOrder()">SEND TO WHATSAPP</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer: Bottom part of the website -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Shop slogan -->
+            <div class="footer-column">
+                <img src="pictures//logo/South Logo.jpg" alt="South's Bake Haven" class="footer-logo">
+                <p class="footer-about">Life tastes better after a slice of cheesecake</p>
+            </div>
+
+            <!-- Links list -->
+            <div class="footer-column">
+                <h3>QUICK LINKS</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="aboutCake.html">Our Story</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+
+            <!-- Products list -->
+            <div class="footer-column">
+                <h3>OUR SWEETS</h3>
+                <ul>
+                    <li>Cinnamon Rolls</li>
+                    <li>Cheese Bars</li>
+                    <li>Custom Cakes</li>
+                    <li>Donuts</li>
+                    <li>and more</li>
+                </ul>
+            </div>
+
+            <!-- Contact Information and Social Media -->
+           <div class="footer-column" id="contact-section">
+                <h3>GET IN TOUCH</h3>
+                <p>📍 South Palale, Tayabas City, Philippines</p>
+                  <p>📞 +63 956 199 1312</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/southiessweetspot" class="social-icon" title="Facebook">FB</a>
+                    <a href="#" class="social-icon" title="Instagram">IG</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright notice -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 South's Bake Haven. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Link to all JavaScript files for the logic and effects -->
+    <script src="config.js"></script>
+    <script src="ui-effects.js"></script>
+    <script src="modal-manager.js"></script>
+    <script src="order-logic.js"></script>
+</body>
+
+</html>

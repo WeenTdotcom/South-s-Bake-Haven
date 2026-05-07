@@ -1,0 +1,139 @@
+/* --- FLOATING NAVBAR --- */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 0;
+    background: transparent; 
+}
+
+.nav-container {
+    max-width: 95%; 
+    width: 1100px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.7); /* Glass Effect */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 10px 25px;
+    border-radius: 100px; /* Pill Shape */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-container:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(3px);
+    box-shadow: 0 12px 40px rgba(93, 64, 55, 0.15);
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border: 2px solid #5d4037;
+    transition: transform 0.5s ease;
+}
+
+.logo-box:hover .logo {
+    transform: rotate(360deg);
+}
+
+.logo-text-group {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-main {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #5d4037;
+}
+
+.logo-sub {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    color: #c68e17;
+}
+
+/* Navigation Links */
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 0 12px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+
+.nav-links a:hover {
+    color: #5d4037;
+    background: rgba(198, 142, 23, 0.1);
+}
+
+.nav-links a.active {
+    background: #5d4037;
+    color: #fff;
+}
+
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 5px;
+    left: 50%;
+    background: #c68e17;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+    width: 50%;
+}
+
+.btn-order-unique {
+    background: linear-gradient(135deg, #5d4037 0%, #3e2723 100%);
+    color: white;
+    padding: 10px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(93, 64, 55, 0.3);
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.btn-order-unique:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(93, 64, 55, 0.4);
+    letter-spacing: 2px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}

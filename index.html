@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic setup for the website -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South's Bake Haven | Creating Sweet Memories</title>
+    
+    <!-- Link to Google Fonts for nice text styles -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Outfit:wght@300;500;800&display=swap"
+        rel="stylesheet">
+    
+    <!-- Links to your CSS files for styling -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carousel.css">
+    <link rel="stylesheet" href="animatedNavBAR.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar at the top -->
+    <header class="navbar">
+        <div class="nav-container">
+            
+            <!-- Logo Section: Contains the image and the name of the shop -->
+            <div class="logo-box">
+                <img src="pictures/logo/South Logo.jpg" alt="South's Bake Haven" class="logo">
+                <div class="logo-text-group">
+                    <span class="logo-main">SOUTH'S</span>
+                    <span class="logo-sub">BAKE HAVEN</span>
+                </div>
+            </div>
+
+            <!-- Menu Links: Navigation to different pages -->
+            <nav class="nav-links" id="nav-menu">
+                <a href="index.html" class="active">HOME</a>
+                <a href="aboutCake.html">OUR STORY</a>
+                <a href="menu.html">MENU</a>
+                <a href="gallery.html">GALLERY</a>
+                <a href="index.html#contact-section">CONTACT</a>
+            </nav>
+
+            <!-- Right side of the Nav: Order button and Mobile menu toggle -->
+            <div class="nav-right">
+                <a href="menu.html" class="btn-order-unique">
+                    <span>ORDER NOW</span>
+                </a>
+
+                <!-- Button for mobile users to open the menu -->
+                <button class="mobile-toggle" onclick="toggleMenu()">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Section: The main welcome area (Hero section) -->
+    <section class="home">
+        <div class="home-inner">
+            <!-- Text content for the welcome section -->
+            <div class="home-text">
+                <h1 class="home-title">Life tastes <span class="text-caramelbrown">better</span> after a slice of <span
+                        class="text-caramelbrown">cheesecake</span></h1>
+                <p class="home-desc">Creating sweet memories with every slice. Freshly baked favorites from the heart of
+                    the South.</p>
+                <!-- Action buttons -->
+                <div class="home-actions">
+                    <a href="menu.html" class="btn-pill btn-caramelbrown">EXPLORE MENU</a>
+                    <a href="aboutCake.html" class="btn-pill btn-outline">ABOUT US</a>
+                </div>
+            </div>
+            <!-- Main image on the home page -->
+            <div class="home-image-container">
+                <img src="pictures/logo/South Logo.jpg" alt="Southie's Featured Treats" class="home-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Promos Section: Special offers and quick links -->
+    <section class="promos">
+        <div class="promo-grid">
+            <!-- Latest Promos card -->
+            <div class="promo-card bg-softgold">
+                <h2>LATEST PROMOS</h2>
+                <p>Don't miss out on our daily treats!</p>
+                <a href="menu.html" class="promo-link">LEARN MORE &rarr;</a>
+            </div>
+            <!-- Gallery link card -->
+            <div class="promo-card bg-caramelbrown">
+                <h2>GALLERY</h2>
+                <p>Take a peek at the South’s most loved treats!</p>
+                <a href="gallery.html" class="promo-link">SEE MORE &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel Section: A sliding gallery of cake images -->
+    <section class="carousel-section">
+        <div class="carousel-container">
+            <h2 class="section-title">OPEN GALLERY</h2>
+            <div class="carousel-track" id="carousel-track">
+
+               
+                <a href="gallery.html" class="card-link">
+                    <div class="card">
+                        <div class="card-img-wrapper">
+                            <img src="pictures/gallery/26b69d85-b2ea-4f4a-ab61-5890cca6de9a.jpg" alt="Custom Cake">
+                        </div>
+                    </div>
+                </a>
+
+                <a href="gallery.html" class="card-link">
+                    <div class="card">
+                        <div class="card-img-wrapper">
+                            <img src="pictures/gallery/3ad203a8-1d43-4ef9-b562-b2333ef18a26.jpg" alt="Custom Cake">
+                        </div>
+                    </div>
+                </a>
+
+               
+                <a href="gallery.html" class="card-link">
+                    <div class="card">
+                        <div class="card-img-wrapper">
+                            <img src="pictures/gallery/2a37c291-4627-4e1d-aba5-6e1dfecf8fff.jpg" alt="Custom Cake">
+                        </div>
+                    </div>
+                </a>
+
+                
+                <a href="gallery.html" class="card-link">
+                    <div class="card">
+                        <div class="card-img-wrapper">
+                            <img src="pictures/gallery/cake.jpg" alt="Custom Cake">
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript files for website functionality -->
+    <script src="config.js"></script>
+    <script src="ui-effects.js"></script>
+    <script src="modal-manager.js"></script>
+    <script src="order-logic.js"></script>
+
+    <!-- Footer Section: Bottom part of the website with info -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Footer Column 1: About the shop -->
+            <div class="footer-column">
+                <img src="pictures/logo/South Logo.jpg" alt="South's Bake Haven" class="footer-logo">
+                <p class="footer-about">Life tastes better after a slice of cheesecake</p>
+            </div>
+
+            <!-- Footer Column 2: Navigation links -->
+            <div class="footer-column">
+                <h3>QUICK LINKS</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="aboutCake.html">Our Story</a></li>
+                     <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+
+            <!-- Footer Column 3: List of products -->
+            <div class="footer-column">
+                <h3>OUR SWEETS</h3>
+                <ul>
+                    <li>Cinnamon Rolls</li>
+                    <li>Cheese Bars</li>
+                    <li>Custom Cakes</li>
+                    <li>Donuts</li>
+                    <li>and more</li>
+                </ul>
+            </div>
+
+            <!-- Footer Column 4: Contact details and Social Media -->
+            <div class="footer-column" id="contact-section">
+                <h3>GET IN TOUCH</h3>
+                <p>📍 South Palale, Tayabas City, Philippines</p>
+                <p>📞 +63 956 199 1312</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/southiessweetspot" class="social-icon" title="Facebook">FB</a>
+                    <a href="#" class="social-icon" title="Instagram">IG</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright section -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 South's Bake Haven. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
